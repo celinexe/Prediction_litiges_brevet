@@ -4,7 +4,12 @@
 ## Introduction 
 
 Ici, à travers ce projet de groupe, je souhaiterais mettre en avant un problème souvent rencontré lors des projets de Data Science de classification : celui du problème de déséquilibre de classe. 
-Ce projet académique se porte sur la prédiction de litiges de brevet : établir un modèle automatique capable de prédire la probabilité, soit classifier si un brevet est susceptible d’être impliqué dans un litige ou non. 
+
+### Contexte: 
+L’innovation technologique moderne repose largement sur l’accumulation de découvertes successives, notamment dans des secteurs comme les technologies de l’information et les biotechnologies. Dans ces écosystèmes complexes, les brevets sont fortement interdépendants, exposant ainsi les innovateurs à des risques accrus de litiges juridiques. 
+L'objectif de ce projet est d'établir un modèle automatique capable de prédire la probabilité, soit classifier si un brevet est susceptible d’être impliqué dans un litige ou non, afin de permettre aux entreprises et aux PME d'anticiper les risques juridiques et de mieux protéger leurs investissements en R&D. 
+
+
 
 Nous disposons d’une base de données brut d’environs 644 000 brevets déposés aux États-Unis et au Japon entre 2002 et 2005, nous exploitons des indicateurs variés (total de 30 variables )  — profil du titulaire, stratégie de dépôt, transferts, etc… 
 
