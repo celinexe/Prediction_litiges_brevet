@@ -55,7 +55,7 @@ Dans le modèle RandomForest de la bibliothèque scikit-learn, l’argument clas
 Data-preprocessing : 
 Le Jupyter Notebook contient les détails de chaque étape du code, notamment le nettoyage de la base de données, la définition de la variable cible, etc. 
 
-[](lien) 
+[Data Preprocessing pipeline Notebook](https://github.com/celinexe/Prediction_litiges_brevets/blob/main/NettoyageDatabase.ipynb) 
 
 
 ### Construction de la variable cible : 
@@ -87,11 +87,15 @@ Le désavantage de l’oversampling est la fiabilité des observations généré
 
 La méthode de réechantillonage Smote et UnderSampling sont appliquées sur dans un premier modèle de réseau de neurones DNN et puis sur un second modèle XGboost. Ces deux modèles de machine learning, XGBoost et DNN, dont l’optimisation (architecture et choix des hyperparamètres) a déjà été réalisée au préalable.
 
+[code optimization DNN ]
+
+[Exemple Code Resampling DNN](https://github.com/celinexe/Prediction_litiges_brevets/blob/main/DNN_resampling.ipynb)
+
 On choisit un paramètre de rééquilibrage de 0,5, c’est-à-dire qu’on augmente ou réduit les observations de la classe minoritaire pour qu’elles représentent 50 % des observations de la classe majoritaire.
 
-<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/dnn_score.png" width="700" height="400">
+<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/dnn_score.png" width="700" height="500">
 
-<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/xgboost_score.png" width="700" height="400">
+<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/xgboost_score.png" width="700" height="500">
 
 
 
