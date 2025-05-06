@@ -17,25 +17,27 @@ Après analyse et manipulation, nous observons que seulement 1,2% de l’ensembl
 
 Je souhaiterais ici uniquement, mettre en avant quelques parties du travail qui m’ont particulièrement plu : 
 
-Data Pre-Processing (à l’aide de  la librarie panda  de python): <br>
-  Pipeline 
-  Suppression des variables qui ne contribuent pas à la prédiction (ex: les numéros d'identifiant) 
-	Data Engineering : création de la variable de cible (étude aggrégation inclusif OU logique ) 
-	Nettoyage de la base de données (Suppression des NA's ou remplacement par moyenne) 
+### Data Pre-Processing (à l’aide de  la librarie panda  de python): <br>
+  Pipeline <br>
+  Suppression des variables qui ne contribuent pas à la prédiction (ex: les numéros d'identifiant) <br>
+	Data Engineering : création de la variable de cible (étude aggrégation inclusif OU logique ) <br>
+	Nettoyage de la base de données (Suppression des NA's ou remplacement par moyenne) <br>
 	Creation d’une base de données propres et commune utilisable par tous les membre du groupe
 
-Analyse : 
-	Corrélation 
-	Feature importance à travers les forêts aléatoires (Random Forest) 
+### Analyse : 
+	Corrélation <br>
+	Feature importance à travers les forêts aléatoires (Random Forest) <br>
 
-Problème du Déquilibre de Classes : 
+### Problème du Déquilibre de Classes : 
 
    •Méthode 1 : Rééchantillonnage 
-Sur-échantillonage et Sous-échantillonage à l’aide de SMOTE, et UnderSampling des bibliothèques ‘’imblearn’’ et ‘’RandomUnderSampler’’ des libraries Python. 
+Sur-échantillonage  à l’aide de SMOTE de la bibliothèque python ’imblearn'. <br>
+Sous-échantillonage à l’aide  UnderSampling de la  bibliothèque python 'RandomUnderSampler’. <br> 
+
 Ces deux méthodes sont testées sur 2 modèles de machine learning : XGBoost et DNN (Dense Neural network). 
 
 
-   •Méthode 2 : Pondération des classes - 
+   •Méthode 2 : Pondération des classes 
 
 Dans le modèle RandomForest de la bibliothèque scikit-learn, l’argument class_weight permet d’attribuer un poids à chaque classe. En augmentant le poids de la classe minoritaire, on incite le modèle à lui accorder davantage d’attention, ce qui peut améliorer ses performances, notamment en termes de détection de cette classe.
 
