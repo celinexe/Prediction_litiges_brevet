@@ -73,6 +73,8 @@ L’analyse de la matrice de corrélation n’a pas permis d’identifier claire
 
 <img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/feautre_impo_rf.png" width="700" height="400">
 
+[code feature importance](https://github.com/celinexe/Prediction_litiges_brevets/blob/main/RF_FeaturesImportance.py)
+
 Dans un second temps, j’ai fixé un seuil d’importance et réentraîné le modèle en ne conservant que les variables dépassant ce seuil. Cependant, cette approche n’a pas permis d’obtenir une amélioration significative des performances. Nous avons donc finalement décidé de conserver l’ensemble des variables pour l’entraînement des modèles.
 
 
