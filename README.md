@@ -10,7 +10,7 @@ Nous disposons d’une base de données brut d’environs 644 000 brevets dépos
 
 Après analyse et manipulation, nous observons que seulement 1,2% de l’ensemble des brevets sont litigieux ! Nous avons remarqué que ce déséquilibre de classe était très problématique et empêchait nos modèles de Machine Learning à apprendre correctement et des performances médiocres nous empêchant de mettre ce modèle en production pour les entreprises. 
 
-![ ] (image déséquilibre de classe) 
+<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/desequilibre.png" width="600" height="400">
 
 
 ## Points clé
