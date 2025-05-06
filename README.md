@@ -107,6 +107,28 @@ On choisit un paramètre de rééquilibrage de 0,5, c’est-à-dire qu’on augm
 Après l’application des techniques de rééchantillonnage, on observe une amélioration significative du taux de rappel (recall) ainsi que du score F1, ce qui indique que le mo- dèle parvient mieux à détecter les cas de litige. Cependant, cette amélioration se fait au détriment de la précision, qui chute fortement. Avant le rééchantillonnage, 55 % des brevets prédits comme étant des litiges étaient effectivement des litiges. Après rééchan- tillonnage, ce taux tombe en moyenne à seulement 7.5%, ce qui signifie que le modèle génère beaucoup plus de faux positifs. 
 Cette situation illustre bien le compromis entre précision et rappel : en augmentant la capacité du modèle à détecter les litiges (rappel), on augmente également le risque de prédire des litiges là où il n’y en a pas (baisse de précision). 
 
+### Pondération des classes
+
+Dans cette partie, je tiens à préciser que je n'ai pas personnellment rédigé le code. Je souhaite commenté quelques résultats obtenue en utilisant la pondérations des classes.
+
+[code si intéressé]()
+
+Afin d’améliorer les performances, nous avons utilisé XGBoost, particulièrement adapté aux jeux de données déséquilibrés. Nous avons effectué une recherche par grille sur les poids des classes ( GridSearchCV) , dans les plages suivantes :
+— Pour la classe 0 : [10−2, 10−1, 1, 10, 102] 
+— Pour la classe 1 : [10, 102, 103]
+
+À chaque itération, les poids ont été injectés via : 
+
+		sample_weights = np.where(y_train == 0, poids_0, poids_1)
+  
+Le modèle a été entraîné sur ces échantillons pondérés, puis évalué avec classification_report
+pour en extraire le F1-score de la classe 1. 
+
+Le meilleur F1-score obtenu dans ce cadre est : F1-score = 0.16153
+
+#### Conclusion pondération des classes 
+
+Les résultats du modèle XGBoost avec pondération restent modestes, avec un F1-score final autour de 0.16. Toutefois, l’ajustement des poids et du seuil a permis d’améliorer sensiblement la détection des brevets en litige, atténuant partiellement l’impact du dés- équilibre des classes.
 
 
 
