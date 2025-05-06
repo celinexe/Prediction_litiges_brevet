@@ -9,7 +9,7 @@ Ici, à travers ce projet de groupe, je souhaiterais mettre en avant un problèm
 L’innovation technologique moderne repose largement sur l’accumulation de découvertes successives, notamment dans des secteurs comme les technologies de l’information et les biotechnologies. Dans ces écosystèmes complexes, les brevets sont fortement interdépendants, exposant ainsi les innovateurs à des risques accrus de litiges juridiques. 
 L'objectif de ce projet est d'établir un modèle automatique capable de prédire la probabilité, soit classifier si un brevet est susceptible d’être impliqué dans un litige ou non, afin de permettre aux entreprises et aux PME d'anticiper les risques juridiques et de mieux protéger leurs investissements en R&D. 
 
-<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/intro.png" width="500" height="300">
+<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/intro.png" width="600" height="300">
 
 
 
@@ -67,10 +67,10 @@ plus sensible à des formes variées de contentieux.
 
 L’analyse de la matrice de corrélation n’a pas permis d’identifier clairement des variables explicatives pertinentes, car la corrélation entre les variables explicatives et la variable cible (‘prediction’) était très faible. J’ai donc utilisé un modèle Random Forest pour estimer l’importance des variables, en m’appuyant sur la fréquence d’utilisation des variables dans les arbres et leur impact sur la réduction de l’impureté (indice de Gini).
 
-<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/matrice_cor.png" width="500" height="300">
+<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/matrice_cor.png" width="600" height="300">
 
 
-<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/feature_impo_rf.png" width="500" height="300">
+<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/fetaure_impo_rf.png" width="700" height="300">
 
 Dans un second temps, j’ai fixé un seuil d’importance et réentraîné le modèle en ne conservant que les variables dépassant ce seuil. Cependant, cette approche n’a pas permis d’obtenir une amélioration significative des performances. Nous avons donc finalement décidé de conserver l’ensemble des variables pour l’entraînement des modèles.
 
