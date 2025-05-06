@@ -15,9 +15,13 @@ L'objectif de ce projet est d'établir un modèle automatique capable de prédir
 
 Nous disposons d’une base de données brut d’environs 644 000 brevets déposés aux États-Unis et au Japon entre 2002 et 2005, nous exploitons des indicateurs variés (total de 30 variables )  — profil du titulaire, stratégie de dépôt, transferts, etc… 
 
-Après analyse et manipulation, nous observons que seulement 1,2% de l’ensemble des brevets sont litigieux ! Nous avons remarqué que ce déséquilibre de classe était très problématique et empêchait nos modèles de Machine Learning à apprendre correctement et des performances médiocres nous empêchant de mettre ce modèle en production pour les entreprises. 
+Après analyse et manipulation, nous observons que seulement 1,2% de l’ensemble des brevets sont litigieux !
 
 <img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/desequilibre.png" width="500" height="300">
+
+Nous avons remarqué que ce déséquilibre de classe était très problématique et empêchait nos modèles de Machine Learning à apprendre correctement et des performances médiocres nous empêchant de mettre ce modèle en production pour les entreprises. Nous avons fait le choix d'entrainer 4 modèles de ML différents et observé dans un premier temps les scores F1 et recall qui sont les plus métriques les plus adéquates de ce problème. 
+
+<img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/comparaison.png" width="500" height="300">
 
 
 ## Points clés
