@@ -130,6 +130,15 @@ Le meilleur F1-score obtenu dans ce cadre est : F1-score = 0.16153
 
 Les résultats du modèle XGBoost avec pondération restent modestes, avec un F1-score final autour de 0.16. Toutefois, l’ajustement des poids et du seuil a permis d’améliorer sensiblement la détection des brevets en litige, atténuant partiellement l’impact du déséquilibre des classes.
 
+## Conclusion globale 
+
+
+ Nous avons observé que l’utilisation des techniques de rééchantillonnage et l’ajustement des class_weight ont permis d’améliorer le recall score du modèle. Concrètement, cela signifie que le modèle repère mieux les cas à risque de litiges de brevet.
+Cependant, cette amélioration s’est accompagnée d’une baisse drastique de la précision, entraînant une hausse des faux positifsi i.e le modèle signale à tort certains dossiers comme litiges. Ce qui engendre un travail supplémentaire aux équipes juridiques et empêche certaine entreprise de développer leur nouvelle technologie.
+
+Ce constat met en évidence un point crucial : il est nécessaire de trouver un bon compromis entre recall et précision en fonction des priorités de l’entreprise. 
+
+À travers ce travail de groupe , on retient que l’évaluation d’un modèle ne doit pas se limiter à des indicateurs chiffrés, mais aussi prendre en compte son impact opérationnel, pour s’assurer qu’il soit réellement adapté aux besoins et aux contraintes du domaine des litiges de brevet.
 
 
 
