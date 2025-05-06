@@ -80,11 +80,11 @@ Dans un second temps, j’ai fixé un seuil d’importance et réentraîné le m
 
 ### Réechantillonage 
 
-Le principe de SMOTE est de générer de nouvelles observations synthétiques appartenant à la classe minoritaire, dans notre cas, la classe positive correspondant aux li- tiges. Ces nouvelles observations sont créées en interpolant les caractéristiques d’exemples existants de la classe minoritaire. En augmentant ainsi le nombre d’exemples positifs, on parvient à rééquilibrer les proportions entre les classes, ce qui améliore la capacité du mo- dèle à reconnaître les cas rares. Il est également possible de contrôler le degré de rééquili- brage, en choisissant dans quelle proportion on souhaite augmenter la classe minoritaire par rapport à la classe majoritaire. 
+Le principe de SMOTE est de générer de nouvelles observations synthétiques appartenant à la classe minoritaire, dans notre cas, la classe positive correspondant aux li- tiges. Ces nouvelles observations sont créées en interpolant les caractéristiques d’exemples existants de la classe minoritaire. En augmentant ainsi le nombre d’exemples positifs, on parvient à rééquilibrer les proportions entre les classes, ce qui améliore la capacité du mo- dèle à reconnaître les cas rares. Il est également possible de contrôler le degré de rééquilibrage, en choisissant dans quelle proportion on souhaite augmenter la classe minoritaire par rapport à la classe majoritaire. 
 
 Si l’oversampling parvient à régler le souci de déséquilibre, l’undersampling est lui aussi une autre méthode pour atténuer ce déséquilibre. Au lieu de générer synthétiquement des observations, l’undersampling réduit la base de données en supprimant les observations appartenant à la classe majoritaire. Il est possible notamment de contrôler le degré de rééquilibrage. 
 
-Le désavantage de l’oversampling est la fiabilité des observations générées synthéti- quement, tandis que pour l’undersampling, l‘inconvénient se trouve dans la perte d’in- formations puisque l’on supprime des observations. Si la taille du jeu de données n’est pas importante, on risque de perdre trop de données et d’avoir un modèle dysfonctionnel. Toutefois, même si la taille du jeu de données est assez importante, mais que le déséqui- libre de classes est trop élevé, en se ramenant à une proportion correcte de classes positive et négative, on risque de perdre trop d’informations car on supprime trop d’observations. 
+Le désavantage de l’oversampling est la fiabilité des observations générées synthéti- quement, tandis que pour l’undersampling, l‘inconvénient se trouve dans la perte d’in- formations puisque l’on supprime des observations. Si la taille du jeu de données n’est pas importante, on risque de perdre trop de données et d’avoir un modèle dysfonctionnel. Toutefois, même si la taille du jeu de données est assez importante, mais que le déséquilibre de classes est trop élevé, en se ramenant à une proportion correcte de classes positive et négative, on risque de perdre trop d’informations car on supprime trop d’observations. 
 
 
 La méthode de réechantillonage Smote et UnderSampling sont appliquées sur dans un premier modèle de réseau de neurones DNN et puis sur un second modèle XGboost. Ces deux modèles de machine learning, XGBoost et DNN, dont l’optimisation (architecture et choix des hyperparamètres) a déjà été réalisée au préalable.
@@ -111,7 +111,7 @@ Cette situation illustre bien le compromis entre précision et rappel : en augme
 
 Dans cette partie, je tiens à préciser que je n'ai pas personnellment rédigé le code. Je souhaite commenté quelques résultats obtenue en utilisant la pondérations des classes.
 
-[code si intéressé]()
+[Code si intéressé]()
 
 Afin d’améliorer les performances, nous avons utilisé XGBoost, particulièrement adapté aux jeux de données déséquilibrés. Nous avons effectué une recherche par grille sur les poids des classes ( GridSearchCV) , dans les plages suivantes :
 — Pour la classe 0 : [10−2, 10−1, 1, 10, 102] 
@@ -128,7 +128,7 @@ Le meilleur F1-score obtenu dans ce cadre est : F1-score = 0.16153
 
 #### Conclusion pondération des classes 
 
-Les résultats du modèle XGBoost avec pondération restent modestes, avec un F1-score final autour de 0.16. Toutefois, l’ajustement des poids et du seuil a permis d’améliorer sensiblement la détection des brevets en litige, atténuant partiellement l’impact du dés- équilibre des classes.
+Les résultats du modèle XGBoost avec pondération restent modestes, avec un F1-score final autour de 0.16. Toutefois, l’ajustement des poids et du seuil a permis d’améliorer sensiblement la détection des brevets en litige, atténuant partiellement l’impact du déséquilibre des classes.
 
 
 
