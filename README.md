@@ -47,7 +47,7 @@ Ces deux méthodes sont testées sur 2 modèles de machine learning : XGBoost et
 
    •Méthode 2 : Pondération des classes 
 
-Dans le modèle RandomForest de la bibliothèque scikit-learn, l’argument class_weight permet d’attribuer un poids à chaque classe. En augmentant le poids de la classe minoritaire, on incite le modèle à lui accorder davantage d’attention, ce qui peut améliorer ses performances, notamment en termes de détection de cette classe.
+Dans le modèle RandomForest ou encore les différentes méthodes d'ensemble de la bibliothèque scikit-learn, l’argument class_weight permet d’attribuer un poids à chaque classe. En augmentant le poids de la classe minoritaire, on incite le modèle à lui accorder davantage d’attention, ce qui peut améliorer ses performances, notamment en termes de détection de cette classe.
 
 
 ## Quelques détails, résumés, commentaires...
