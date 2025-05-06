@@ -22,7 +22,7 @@ Après analyse et manipulation, nous observons que seulement 1,2% de l’ensembl
 
 ## Points clés
 
-Je souhaiterais ici uniquement, mettre en avant quelques parties du travail qui m’ont particulièrement plu : 
+Je souhaiterais ici uniquement, mettre en avant deux parties de l'ensemble du projet qui m’ont particulièrement plu : 
 
 ### Data Pre-Processing (à l’aide de  la librarie panda  de python): 
   Pipeline <br>
