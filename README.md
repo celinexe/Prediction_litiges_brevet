@@ -13,7 +13,7 @@ Après analyse et manipulation, nous observons que seulement 1,2% de l’ensembl
 <img src="https://github.com/celinexe/Prediction_litiges_brevets/blob/main/images/desequilibre.png" width="600" height="400">
 
 
-## Points clé
+## Points clés
 
 Je souhaiterais ici uniquement, mettre en avant quelques parties du travail qui m’ont particulièrement plu : 
 
