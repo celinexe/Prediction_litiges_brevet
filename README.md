@@ -33,8 +33,8 @@ Je souhaiterais ici uniquement, mettre en avant quelques parties du travail qui 
 
 ### Analyse : 
 
-	Corrélation <br>
-	Feature importance à travers les forêts aléatoires (Random Forest) <br>
+Corrélation <br>
+Feature importance à travers les forêts aléatoires (Random Forest) <br>
 
 ### Problème du Déquilibre de Classes : 
 
@@ -54,6 +54,7 @@ Dans le modèle RandomForest de la bibliothèque scikit-learn, l’argument clas
 
 Data-preprocessing : 
 Le Jupyter Notebook contient les détails de chaque étape du code, notamment le nettoyage de la base de données, la définition de la variable cible, etc. 
+
 [](lien) 
 
 
